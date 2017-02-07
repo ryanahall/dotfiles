@@ -1,4 +1,9 @@
-execute pathogen#infect()
+call pathogen#infect()
+
+" clipboard under tmux
+if $TMUX == ''
+  set clipboard=unnamed
+endif
 
 " color scheme
 set t_Co=256
@@ -11,14 +16,19 @@ syntax on
 set number
 set showmatch
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=-1
+set shiftwidth=0
 set smarttab
 set autoindent
 set nocompatible
 
+set encoding=utf-8
+
 set ruler
+
+" ctags
+set tags=./tags
 
 " case insensitive searching only with capital letters
 set ignorecase
@@ -37,6 +47,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
+" quick buffer prev and next
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+
 " Map F5 to toggle gundo
 nnoremap <F5> :GundoToggle<CR>
 
@@ -46,6 +60,9 @@ nnoremap <F8> :TagbarToggle<CR>
 " Persist undo history
 set undofile
 set undodir=~/.vim/undo
+
+" tab undo for insert mode
+inoremap <S-Tab> <C-d>
 
 " Show tab characters
 set list

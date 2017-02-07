@@ -8,7 +8,7 @@ if os.path.dirname(__file__) != '.':
 script = os.path.basename(__file__)
 
 for f in os.listdir('.'):
-    if f in [script, '.git', '.gitmodules', 'extra']:
+    if f in [script, '.git', '.gitignore', '.gitmodules', 'extra']:
         continue
 
     name = '../.' + f

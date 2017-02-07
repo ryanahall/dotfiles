@@ -2,7 +2,7 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ryan/.oh-my-zsh
+export ZSH=/Users/ryan_hall/.oh-my-zsh
 
 alias tmux='tmux -2'
 
