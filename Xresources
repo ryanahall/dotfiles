@@ -1,40 +1,58 @@
+! 256 colors
+Xterm*termName: xterm-256color
+URxvt*termName: rxvt-unicode-256color
 
+! URxvt Style
+URxvt*intensityStyles: false
+URxvt*internalBorder: 0
 
-! - color scheme
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+
+URxvt.borderless:       true
+URxvt*perl-ext-common:  default,matcher
+URxvt*urlLauncher:      x-www-browser
+URxvt*matcher.button:   1
+URxvt.searchable-scrollback: CM-s
+
+! Sauce Code Pro
+URxvt.font:             xft:Source Code Pro for Powerline-10:hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:medium;antialias=False,xft:WenQuanYi Zen Hei-10:medium;antialias=True,xft:HanaMinA-10:medium;antialias:True,xft:HanaMinB-10:medium;antialias:True,xft:HanaMinPlus-10:medium;antialias:True
+URxvt.boldFont:             xft:Source Code Pro for Powerline-10:bold;hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:bold;antialias=False,xft:WenQuanYi Zen Hei-10:bold;antialias=True,xft:HanaMinA-10:bold;antialias:True,xft:HanaMinB-10:bold;antialias:True,xft:HanaMinPlus-10:bold;antialias:True
+
 ! special
-*.foreground:   #f1ebeb
+*.foreground:   #f8f8f2
 *.background:   #272822
-*.cursorColor:  #f1ebeb
+*.cursorColor:  #f8f8f2
 
 ! black
-*.color0:       #48483e
-*.color8:       #76715e
+*.color0:       #272822
+*.color8:       #75715e
 
 ! red
-*.color1:       #dc2566
-*.color9:       #fa2772
+*.color1:       #f92672
+*.color9:       #f92672
 
 ! green
-*.color2:       #8fc029
-*.color10:      #a7e22e
+*.color2:       #a6e22e
+*.color10:      #a6e22e
 
 ! yellow
-*.color3:       #d4c96e
-*.color11:      #e7db75
+*.color3:       #f4bf75
+*.color11:      #f4bf75
 
 ! blue
-*.color4:       #55bcce
-*.color12:      #66d9ee
+*.color4:       #66d9ef
+*.color12:      #66d9ef
 
 ! magenta
-*.color5:       #9358fe
-*.color13:      #ae82ff
+*.color5:       #ae81ff
+*.color13:      #ae81ff
 
 ! cyan
-*.color6:       #56b7a5
-*.color14:      #66efd5
+*.color6:       #a1efe4
+*.color14:      #a1efe4
 
 ! white
-*.color7:       #acada1
-*.color15:      #cfd0c2
+*.color7:       #f8f8f2
+*.color15:      #f9f8f5
 
