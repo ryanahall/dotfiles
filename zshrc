@@ -2,7 +2,7 @@
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryan_hall/.oh-my-zsh
+export ZSH=/home/rhall/.oh-my-zsh
 
 alias tmux='tmux -2'
 
@@ -53,8 +53,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
