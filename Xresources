@@ -16,8 +16,9 @@ URxvt*matcher.button:   1
 URxvt.searchable-scrollback: CM-s
 
 ! Sauce Code Pro
-URxvt.font:             xft:Source Code Pro for Powerline-10:hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:medium;antialias=False,xft:WenQuanYi Zen Hei-10:medium;antialias=True,xft:HanaMinA-10:medium;antialias:True,xft:HanaMinB-10:medium;antialias:True,xft:HanaMinPlus-10:medium;antialias:True
-URxvt.boldFont:             xft:Source Code Pro for Powerline-10:bold;hinting=True;antialias:True,xft:WenQuanYi Bitmap Song-10:bold;antialias=False,xft:WenQuanYi Zen Hei-10:bold;antialias=True,xft:HanaMinA-10:bold;antialias:True,xft:HanaMinB-10:bold;antialias:True,xft:HanaMinPlus-10:bold;antialias:True
+!URxvt.letterSpace: -1
+URxvt.lineSpace: 0
+URxvt.font: xft:Source Code Pro for Powerline:size=10:antialias=true:hinting=true
 
 ! special
 *.foreground:   #f8f8f2
