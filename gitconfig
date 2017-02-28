@@ -1,42 +1,45 @@
 [color]
-  ui = true
-  interactive = true
+	ui = true
+	interactive = true
 
 [color "status"]
-  added = green bold
-  changed = red bold
-  untracked = cyan
+	added = green bold
+	changed = red bold
+	untracked = cyan
 
 [color "diff"]
-  meta = cyan bold
-  old = red bold
-  new = green bold
-  frag = blue
-  commit = yellow bold
+	meta = cyan bold
+	old = red bold
+	new = green bold
+	frag = blue
+	commit = yellow bold
 
 [color "branch"]
-  current = green bold
-  local = bold
-  remote = red bold
+	current = green bold
+	local = bold
+	remote = red bold
 
 [color "grep"]
-  match = cyan
+	match = cyan
 
 [pager]
-  color = true
+	color = true
 
 [core]
-  editor = vim
-  pager = less -i
-  excludesfile = /home/ryan/.gitignore
-  precomposeunicode = true
+	editor = vim
+	pager = less -i
+	excludesfile = /home/ryan/.gitignore
+	precomposeunicode = true
 
 [push]
-  default = current
+	default = current
 [rerere]
-  enabled = 1
+	enabled = 1
 [merge]
-  tool = p4merge
+	tool = p4merge
 [mergetool]
-  keepTemporaries = false
-  prompt = false
+	keepTemporaries = false
+	prompt = false
+[user]
+	name = Ryan Hall
+	email = ryanhall989@gmail.com
