@@ -97,6 +97,8 @@ set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 let g:syntastic_python_checkers=['pyflakes']
 let g:syntastic_mode_map = {'mode':'active','active_filetypes':['javascript','json','python'],'passive_filetypes':['html']}
 
+" gitgutter max signs
+let g:gitgutter_max_signs = 10000
 " change gitgutter sign column color
 highlight SignColumn ctermbg=237 guibg=#3c3d37
 highlight GitGutterAdd ctermfg=2 guifg=#009900
