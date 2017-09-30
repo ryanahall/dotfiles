@@ -1,8 +1,5 @@
-# Launch tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
 # Path to your oh-my-zsh installation.
-export ZSH=/home/rhall/.oh-my-zsh
+export ZSH=/Users/rhall/.oh-my-zsh
 
 alias tmux='tmux -2'
 
