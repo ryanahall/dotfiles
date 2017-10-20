@@ -16,7 +16,7 @@ syntax on
 set number
 set showmatch
 set expandtab
-set tabstop=2
+set tabstop=4
 set softtabstop=-1
 set shiftwidth=0
 set smarttab
