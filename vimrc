@@ -6,9 +6,10 @@ if $TMUX == ''
 endif
 
 " color scheme
-set t_Co=256
-set bg=dark
-colorscheme monokai 
+" set t_Co=256
+set nocompatible
+set termguicolors
+let g:colors_name = 'dracula'
 
 " syntax
 syntax on
@@ -21,7 +22,6 @@ set softtabstop=-1
 set shiftwidth=0
 set smarttab
 set autoindent
-set nocompatible
 
 set encoding=utf-8
 
@@ -29,6 +29,10 @@ set ruler
 
 " ctags
 set tags=./tags
+
+" window resizing
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " case insensitive searching only with capital letters
 set ignorecase
@@ -57,6 +61,11 @@ nnoremap <F5> :GundoToggle<CR>
 " Mao F8 to toggle tag bar
 nnoremap <F8> :TagbarToggle<CR>
 
+" Surround text
+nnoremap <Leader>q" ciw""<Esc>P
+nnoremap <Leader>q' ciw''<Esc>P
+nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
 " Persist undo history
 set undofile
 set undodir=~/.vim/undo
@@ -76,7 +85,7 @@ let g:airline_powerline_fonts = 1
 
 " Enable the list of buffers (airline)
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'dracula'
 
 " ag code search
 let g:agprg="/usr/local/bin/ag --column"

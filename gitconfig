@@ -40,6 +40,7 @@
 [mergetool]
 	keepTemporaries = false
 	prompt = false
+	keepBackup = false
 [user]
 	name = Ryan Hall
-	email = ryan@tokencity.io
+	email = ryanhall989@gmail.com
