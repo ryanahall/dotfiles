@@ -8,7 +8,7 @@ endif
 " color scheme
 " set t_Co=256
 set nocompatible
-set termguicolors
+" set termguicolors
 let g:colors_name = 'dracula'
 
 " syntax
