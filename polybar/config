@@ -237,7 +237,7 @@ label = %date% %time%
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 55
+warn-temperature = 65
 
 format = <ramp> <label>
 format-underline = #00000000

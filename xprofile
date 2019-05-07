@@ -1,0 +1,1 @@
+xrandr --output DP-1 --auto --output eDP-1-1 --auto --below DP-1
