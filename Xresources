@@ -42,3 +42,17 @@ URxvt.font: xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hintin
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #3a3c4e, #3a3c4e, #282936
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #3a3c4e, #e9e9f4, #3a3c4e, #3a3c4e, #f7f7fb
+rofi.color-active:  #3a3c4e, #62d6e8, #3a3c4e, #3a3c4e, #62d6e8
+rofi.color-urgent:  #3a3c4e, #ea51b2, #3a3c4e, #3a3c4e, #ea51b2
+
+! Set the desired separator style
+rofi.separator-style: solid

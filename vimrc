@@ -1,3 +1,4 @@
+let g:dracula_colorterm = 0
 call pathogen#infect()
 
 " clipboard under tmux
@@ -7,9 +8,9 @@ endif
 
 " color scheme
 " set t_Co=256
-set nocompatible
+" set nocompatible
 " set termguicolors
-let g:colors_name = 'dracula'
+colorscheme dracula
 
 " syntax
 syntax on

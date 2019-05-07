@@ -36,7 +36,7 @@
 [rerere]
 	enabled = 1
 [merge]
-	tool = p4merge
+	tool = meld
 [mergetool]
 	keepTemporaries = false
 	prompt = false
