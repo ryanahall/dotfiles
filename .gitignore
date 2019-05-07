@@ -1,4 +1,5 @@
 vim/undo/*
+vim/black/*
 ctags
 .DS_Store
 .DS_Store?
