@@ -11,6 +11,9 @@
 
 force_xinerama yes
 
+# compton compositor
+exec_always --no-startup-id /usr/bin/compton --config $HOME/.config/compton/compton.conf
+
 # polybar
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 
