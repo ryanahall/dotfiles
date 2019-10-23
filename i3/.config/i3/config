@@ -11,7 +11,10 @@
 
 force_xinerama yes
 
+
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
+exec_always --no-startup-id /usr/bin/xfsettingsd
+
 
 # Disable window titlebars
 for_window [class=".*"] border pixel 0
