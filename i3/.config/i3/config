@@ -11,9 +11,13 @@
 
 force_xinerama yes
 
+# polybar
+exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
 exec_always --no-startup-id /usr/bin/xfsettingsd
+exec_always --no-startup-id /usr/bin/xfce4-power-manager
+exec_always --no-startup-id /usr/bin/xfce4-screensaver
 
 
 # Disable window titlebars
@@ -50,7 +54,7 @@ set $right l
 floating_modifier $mod
 
 # i3lock binding
-bindsym $mod+Shift+x exec i3lock -c 494949
+bindsym $mod+Shift+x exec /usr/bin/xfce4-screensaver-command -a
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -239,6 +243,4 @@ client.background       #F8F8F2
 #######################################################################
 # exec i3-config-wizard
 #
-# polybar
-exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 

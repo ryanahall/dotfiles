@@ -1,5 +1,5 @@
 ! Cursor size
-Xcursor.theme: cursor-theme
+Xcursor.theme: DMZ-White
 Xcursor.size: 16
 ! 256 colors
 Xterm*termName: xterm-256color

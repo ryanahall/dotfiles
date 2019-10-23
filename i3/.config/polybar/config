@@ -130,7 +130,7 @@ poll-interval = 5
 ; see "man date" for details on how to format the time string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
 ; Default: %H:%M:%S
-time-format = %H:%M
+time-format = %H:%M:%S
 
 ; Available tags:
 ;   <label-charging> (default)
@@ -237,8 +237,8 @@ ramp-signal-foreground = ${colors.foreground-alt}
 type = internal/date
 label = %{F#FFF}%{F-} %date%  %{F#FFF}%{F-} %time%
 date = %Y-%m-%d
-time = %H:%M
-interval = 5
+time = %H:%M:%S
+interval = 1
 
 [module/temperature]
 type = internal/temperature
