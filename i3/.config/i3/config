@@ -12,7 +12,7 @@
 force_xinerama yes
 
 # compton compositor
-exec_always --no-startup-id /usr/bin/compton --config $HOME/.config/compton/compton.conf
+exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 
 # polybar
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
@@ -247,3 +247,5 @@ client.background       #F8F8F2
 # exec i3-config-wizard
 #
 
+# Requery Xresources
+exec_always --no-startup-id xrdb $HOME/.Xresources
