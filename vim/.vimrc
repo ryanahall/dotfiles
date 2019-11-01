@@ -1,4 +1,3 @@
-let g:dracula_colorterm = 0
 call pathogen#infect()
 
 " clipboard under tmux
@@ -9,7 +8,7 @@ endif
 " color scheme
 " set t_Co=256
 " set nocompatible
-" set termguicolors
+set termguicolors
 colorscheme dracula
 
 " syntax
@@ -96,9 +95,9 @@ let g:ag_format="%f:%l:%m"
 
 
 " show column 80
-set colorcolumn=80
+" set colorcolumn=80
 
-" macvim settings to remove scrollbars
+" settings to remove scrollbars
 set guioptions-=r
 set guioptions-=L
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
