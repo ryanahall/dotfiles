@@ -17,10 +17,13 @@ exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 # polybar
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 
+# dunst
+exec_always --no-startup-id /usr/bin/dunst
+
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
-exec_always --no-startup-id /usr/bin/xfsettingsd
-exec_always --no-startup-id /usr/bin/xfce4-power-manager
-exec_always --no-startup-id /usr/bin/xfce4-screensaver
+#exec_always --no-startup-id /usr/bin/xfsettingsd
+#exec_always --no-startup-id /usr/bin/xfce4-power-manager
+#exec_always --no-startup-id /usr/bin/xfce4-screensaver
 
 
 # Disable window titlebars
