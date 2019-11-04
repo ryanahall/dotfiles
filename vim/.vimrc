@@ -5,10 +5,12 @@ if $TMUX == ''
   set clipboard=unnamed
 endif
 
+
+
 " color scheme
-" set t_Co=256
-" set nocompatible
-set termguicolors
+set t_Co=256
+set nocompatible
+" set termguicolors
 colorscheme dracula
 
 " syntax

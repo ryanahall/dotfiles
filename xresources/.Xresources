@@ -21,7 +21,7 @@ URxvt.searchable-scrollback: CM-s
 ! Sauce Code Pro
 ! URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-URxvt*font: xft:Source Code Pro for Powerline:pixelsize=13:antialias=true:hinting=true,xft:Consolas:size=9:antialias=true:hinting=true,xft:DejaVu Sans:size=9:antialias=true:hinting=true
+URxvt*font: xft:DroidSansMono Nerd Font:pixelsize=13:antialias=true:hinting=true
 
 
 

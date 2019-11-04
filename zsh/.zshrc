@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/usr/share/oh-my-zsh
+export ZSH=/home/ryan/.oh-my-zsh
 
 alias tmux='tmux -2'
 alias gp='git push'

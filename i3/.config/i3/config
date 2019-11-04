@@ -21,10 +21,18 @@ exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 exec_always --no-startup-id /usr/bin/dunst
 
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
-#exec_always --no-startup-id /usr/bin/xfsettingsd
-#exec_always --no-startup-id /usr/bin/xfce4-power-manager
-#exec_always --no-startup-id /usr/bin/xfce4-screensaver
 
+# Media Keys
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # raise volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # lower volume
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # toggle mute for default device
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle # toggle mute for default mic
 
 # Disable window titlebars
 for_window [class=".*"] border pixel 0
@@ -60,7 +68,7 @@ set $right l
 floating_modifier $mod
 
 # i3lock binding
-bindsym $mod+Shift+x exec /usr/bin/xfce4-screensaver-command -a
+bindsym $mod+Shift+x exec /usr/bin/dm-tool lock
 
 # start a terminal
 bindsym $mod+Return exec urxvt
