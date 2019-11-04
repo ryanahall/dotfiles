@@ -12,6 +12,19 @@ cd nerd-fonts
 ./install.sh
 cd ..
 
+# urxvt-unicode with 24 bit color patch
+sudo apt install -y libperl-dev
+git clone git@github.com:exg/rxvt-unicode.git
+cd rxvt-unicode
+git checkout rxvt-unicode-rel-9.22
+git clone git@github.com:enki/libev.git
+git clone git@github.com:yusiwen/libptytty.git
+git apply $HOME/dotfiles/urxvt-24-bit-color.patch
+./autogen.sh
+./configure --enable-everything --enable-24-bit-color
+sudo make install
+cd ..
+
 # zsh
 sudo apt install -y zsh
 #sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

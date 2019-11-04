@@ -7,11 +7,14 @@ endif
 
 
 
+let g_dracula_colorterm=0
 " color scheme
-set t_Co=256
-set nocompatible
-" set termguicolors
+" set t_Co=256
+set termguicolors
 colorscheme dracula
+
+" empty split bar
+set fillchars+=vert:\ 
 
 " syntax
 syntax on
