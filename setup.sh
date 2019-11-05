@@ -13,15 +13,12 @@ cd nerd-fonts
 cd ..
 
 # urxvt-unicode with 24 bit color patch
-sudo apt install -y libperl-dev
-git clone git@github.com:exg/rxvt-unicode.git
+sudo apt install -y libperl-dev cvs
+#git clone git@github.com:exg/rxvt-unicode.git
+cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co rxvt-unicode
 cd rxvt-unicode
-git checkout rxvt-unicode-rel-9.22
-git clone git@github.com:enki/libev.git
-git clone git@github.com:yusiwen/libptytty.git
-git apply $HOME/dotfiles/urxvt-24-bit-color.patch
 ./autogen.sh
-./configure --enable-everything --enable-24-bit-color
+./configure --enable-everything
 sudo make install
 cd ..
 
@@ -66,7 +63,11 @@ cd ..
 
 
 # nvm
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+
+# rvm
+curl -sSL https://get.rvm.io | bash -s stable
 
 # mailhog
 sudo snap install go --classic
