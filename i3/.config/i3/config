@@ -33,6 +33,8 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% # rai
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # lower volume
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # toggle mute for default device
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle # toggle mute for default mic
+bindsym XF86WLAN exec rfkill-toggle wlan
+bindsym XF86Bluetooth exec rfkill-toggle bluetooth
 
 # Disable window titlebars
 for_window [class=".*"] border pixel 0
