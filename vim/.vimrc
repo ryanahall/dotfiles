@@ -13,6 +13,9 @@ let g_dracula_colorterm=0
 set termguicolors
 colorscheme dracula
 
+" Hot module reloading fails in some watchers due to safe writes, disable that
+set backupcopy=yes
+
 " empty split bar
 set fillchars+=vert:\ 
 

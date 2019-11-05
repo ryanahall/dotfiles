@@ -56,7 +56,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
-export PATH="$HOME/dotfiles/bin:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="$HOME/dotfiles/bin:$HOME/go/bin:/snap/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # NVM

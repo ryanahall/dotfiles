@@ -20,6 +20,7 @@ exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 # dunst
 exec_always --no-startup-id /usr/bin/dunst
 
+# wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
 
 # Media Keys
@@ -37,7 +38,7 @@ bindsym XF86WLAN exec rfkill-toggle wlan
 bindsym XF86Bluetooth exec rfkill-toggle bluetooth
 
 # Disable window titlebars
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 4
 
 # Gaps
 gaps inner 20
@@ -219,9 +220,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -230,35 +228,6 @@ client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
-
-
-#bar {
-#  colors {
-#    background #282A36
-#    statusline #F8F8F2
-#    separator  #44475A
-#
-#    focused_workspace  #44475A #44475A #F8F8F2
-#    active_workspace   #282A36 #44475A #F8F8F2
-#    inactive_workspace #282A36 #282A36 #BFBFBF
-#    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-#    binding_mode       #FF5555 #FF5555 #F8F8F2
-#  }
-#}
-
-# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
-
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
-# exec i3-config-wizard
-#
 
 # Requery Xresources
 exec_always --no-startup-id xrdb $HOME/.Xresources

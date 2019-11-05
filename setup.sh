@@ -68,6 +68,26 @@ cd ..
 # nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 
+# mailhog
+sudo snap install go --classic
+go get github.com/mailhog/MailHog
+sudo sh -c 'echo "[Unit]
+Description=MailHog service
+
+[Service]
+ExecStart=/usr/local/bin/mailhog \
+  -api-bind-addr 127.0.0.1:8025 \
+  -ui-bind-addr 127.0.0.1:8025 \
+  -smtp-bind-addr 127.0.0.1:1025
+
+[Install]
+WantedBy=multi-user.target
+" >> /etc/systemd/system/mailhog.service'
+sudo ln -s $HOME/go/bin/MailHog /usr/local/bin/mailhog
+sudo systemctl daemon-reload
+sudo systemctl enable mailhog
+sudo systemctl start mailhog
+
 
 # stow dotfiles
 cd ~/dotfiles
