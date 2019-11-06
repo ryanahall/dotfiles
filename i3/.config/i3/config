@@ -37,6 +37,11 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle # to
 bindsym XF86WLAN exec rfkill-toggle wlan
 bindsym XF86Bluetooth exec rfkill-toggle bluetooth
 
+# Audio Control
+bindsym --release $mod+Left exec --no-startup-id xdotool key --clearmodifiers 'XF86AudioPrev'
+bindsym --release $mod+Right exec --no-startup-id xdotool key --clearmodifiers 'XF86AudioNext'
+bindsym --release $mod+Down exec --no-startup-id xdotool key --clearmodifiers 'XF86AudioPlay'
+
 # Disable window titlebars
 for_window [class=".*"] border pixel 4
 
@@ -90,12 +95,6 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # resize (grow) focused window
 bindsym $mod+Ctrl+$left resize grow left 40 px

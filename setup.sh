@@ -3,8 +3,19 @@
 mkdir ~/code
 cd ~/code
 
-sudo apt install -y playerctl feh compton rxvt-unicode postgresql nginx stow vim rofi python-venv \
-  libpython-dev tmux zsh
+# basic packages
+sudo apt install -y playerctl feh compton rxvt-unicode stow vim rofi tmux zsh
+
+# dev dependencies
+sudo apt install -y nginx postgresql python-venv cmake libpython-dev libwebkit2gtk-4.0-dev \
+  libxcb-xkb-dev libfontconfig1-dev libgles2-mesa-dev libfreetype6-dev libexpat-dev
+
+sudo snap install go --classic
+
+# docker dependencies
+sudo apt-get remove -y docker docker-engine docker.io containerd runc
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent \
+  software-properties-common
 
 # polybar dependencies
 sudo apt install -y build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev \
@@ -34,8 +45,14 @@ cd ~/code/rxvt-unicode
 ./configure --enable-everything
 sudo make install
 
-# golang
-sudo snap install go --classic
+# docker install
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # zsh
 #sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -44,3 +44,6 @@
 [user]
 	name = Ryan Hall
 	email = ryanhall989@gmail.com
+
+[url "ssh://git@github.com/"]
+	insteadOf = "https://github.com/"
