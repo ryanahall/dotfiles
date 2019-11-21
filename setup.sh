@@ -4,7 +4,7 @@ mkdir ~/code
 cd ~/code
 
 # basic packages
-sudo apt install -y playerctl feh compton rxvt-unicode stow vim rofi tmux zsh
+sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh
 
 # dev dependencies
 sudo apt install -y nginx postgresql python-venv cmake libpython-dev libwebkit2gtk-4.0-dev \
@@ -52,7 +52,18 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose
+
+# terraform install
+terraform_version=0.12.13
+wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
+unzip terraform_${terraform_version}_linux_amd64.zip
+sudo mv terraform /usr/local/bin
+rm terraform_${terraform_version}_linux_amd64.zip
+
 
 # zsh
 #sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

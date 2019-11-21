@@ -44,6 +44,9 @@ bindsym --release $mod+Down exec --no-startup-id xdotool key --clearmodifiers 'X
 
 # Disable window titlebars
 for_window [class=".*"] border pixel 4
+for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
 # Gaps
 gaps inner 20
