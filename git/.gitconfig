@@ -33,14 +33,21 @@
 
 [push]
 	default = current
+
 [rerere]
 	enabled = 1
+
 [merge]
 	tool = meld
+
 [mergetool]
 	keepTemporaries = false
 	prompt = false
 	keepBackup = false
+
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+
 [user]
 	name = Ryan Hall
 	email = ryanhall989@gmail.com
