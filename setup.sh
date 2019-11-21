@@ -7,7 +7,7 @@ cd ~/code
 sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh
 
 # dev dependencies
-sudo apt install -y nginx postgresql python-venv cmake libpython-dev libwebkit2gtk-4.0-dev \
+sudo apt install -y nginx postgresql python3-venv cmake libpython3-dev libwebkit2gtk-4.0-dev \
   libxcb-xkb-dev libfontconfig1-dev libgles2-mesa-dev libfreetype6-dev libexpat-dev
 
 sudo snap install go --classic
