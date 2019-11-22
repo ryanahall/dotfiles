@@ -7,7 +7,7 @@ cd ~/code
 sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh xfce4-settings imwheel
 
 # dev dependencies
-sudo apt install -y nginx meld postgresql python3-venv cmake libpython3-dev libwebkit2gtk-4.0-dev \
+sudo apt install -y nginx meld postgresql python3-venv pipenv rbenv gnupg2 cmake libpython3-dev libwebkit2gtk-4.0-dev \
   libxcb-xkb-dev libfontconfig1-dev libgles2-mesa-dev libfreetype6-dev libexpat-dev
 
 sudo snap install go --classic
@@ -32,6 +32,10 @@ sudo apt install -y libdbus-1-dev libx11-dev libxinerama-dev libxrandr-dev libxs
 
 # rxvt-unicode-truecolor dependencies
 sudo apt install -y libperl-dev cvs
+
+# firewall
+sudo apt install -y ufw
+sudo ufw default deny incoming
 
 # fonts
 cd ~/code && git clone git@github.com:ryanoasis/nerd-fonts.git
@@ -95,9 +99,6 @@ sudo make install
 # nvm
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
-
-# rvm
-curl -sSL https://get.rvm.io | bash -s stable
 
 # mailhog
 go get github.com/mailhog/MailHog
