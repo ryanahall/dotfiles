@@ -132,4 +132,4 @@ sudo apt update && sudo apt install -y google-cloud-sdk
 
 # stow dotfiles
 cd ~/dotfiles
-stow vim git dunst i3 pulse tmux vim xmodmap xresources zsh
+stow vim git dunst i3 pulse tmux vim xmodmap xresources zsh compton
