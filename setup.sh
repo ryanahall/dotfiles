@@ -4,7 +4,7 @@ mkdir ~/code
 cd ~/code
 
 # basic packages
-sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh xfce4-settings imwheel
+sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh xfce4-settings imwheel xdotool
 
 # dev dependencies
 sudo apt install -y nginx meld postgresql python3-venv pipenv rbenv gnupg2 cmake libpython3-dev libwebkit2gtk-4.0-dev \
