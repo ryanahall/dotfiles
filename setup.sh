@@ -4,10 +4,10 @@ mkdir ~/code
 cd ~/code
 
 # basic packages
-sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh
+sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh xfce4-settings imwheel
 
 # dev dependencies
-sudo apt install -y nginx postgresql python3-venv cmake libpython3-dev libwebkit2gtk-4.0-dev \
+sudo apt install -y nginx meld postgresql python3-venv cmake libpython3-dev libwebkit2gtk-4.0-dev \
   libxcb-xkb-dev libfontconfig1-dev libgles2-mesa-dev libfreetype6-dev libexpat-dev
 
 sudo snap install go --classic

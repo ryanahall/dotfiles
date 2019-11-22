@@ -11,6 +11,12 @@
 
 force_xinerama yes
 
+# xfce4 settings daemon
+exec_always --no-startup-id xfsettingsd --sm-client-disable &
+
+# imwheel
+exec_always --no-startup-id /usr/bin/imwheel --kill
+
 # compton compositor
 exec_always --no-startup-id $HOME/.i3/startup/compton.sh
 
