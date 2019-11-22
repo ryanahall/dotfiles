@@ -36,6 +36,7 @@ sudo apt install -y libperl-dev cvs
 # firewall
 sudo apt install -y ufw
 sudo ufw default deny incoming
+sudo ufw enable
 
 # fonts
 cd ~/code && git clone git@github.com:ryanoasis/nerd-fonts.git
