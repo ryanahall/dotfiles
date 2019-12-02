@@ -64,3 +64,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "vim/.vim/bundle/tsuquyomi"]
+	path = vim/.vim/bundle/tsuquyomi
+	url = git@github.com:Quramy/tsuquyomi.git
