@@ -67,3 +67,6 @@
 [submodule "vim/.vim/bundle/tsuquyomi"]
 	path = vim/.vim/bundle/tsuquyomi
 	url = git@github.com:Quramy/tsuquyomi.git
+[submodule "vim/.vim/bundle/coc.nvim"]
+	path = vim/.vim/bundle/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
