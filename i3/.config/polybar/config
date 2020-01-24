@@ -45,7 +45,7 @@ module-margin-right = 3
 
 font-0 = "Ubuntu Nerd Font:style=Regular:size=10:antialias=true;1"
 
-modules-left = i3
+modules-left = i3 xwindow
 modules-center = date
 modules-right = pulseaudio network memory cpu temperature battery powermenu
 
@@ -137,14 +137,14 @@ time-format = Xr
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <ramp-capacity> <label-charging>
+format-charging = <ramp-capacity> ⚡ <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity>  <label-discharging>
 
 ; Available tags:
 ;   <label-full> (default)
