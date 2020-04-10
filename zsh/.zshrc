@@ -66,6 +66,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# pip
+export PATH="$HOME/.local/bin:$PATH"
+
 source $ZSH/oh-my-zsh.sh
 #source ~/google-cloud-sdk/completion.zsh.inc
 #source ~/google-cloud-sdk/path.zsh.inc

@@ -47,7 +47,7 @@ font-0 = "Ubuntu Nerd Font:style=Regular:size=10:antialias=true;1"
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = pulseaudio network memory cpu temperature battery powermenu
+modules-right = pulseaudio wired-network wireless-network memory cpu temperature battery powermenu
 
 tray-position = right
 tray-padding = 2
@@ -212,14 +212,30 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #00000000
 label = %percentage_used%%
 
-[module/network]
+[module/wired-network]
 type = internal/network
-interface = wlp0s20f3
+interface = eno1
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+accumulate-stats = true
+
+format-connected = <label-connected>
 format-connected-underline = #00000000
-label-connected = " %essid%"
+label-connected = "%local_ip%   %upspeed%   %downspeed%"
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${colors.alert}
+label-disconnected = xx.xx.xx.xx
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/wireless-network]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal>  <label-connected>
+format-connected-underline = #00000000
+label-connected = "%local_ip%   %upspeed%   %downspeed%"
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
@@ -242,7 +258,7 @@ interval = 1
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
+thermal-zone = 2
 warn-temperature = 65
 
 format = <ramp> <label>
