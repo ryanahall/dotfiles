@@ -33,6 +33,9 @@ sudo apt install -y libdbus-1-dev libx11-dev libxinerama-dev libxrandr-dev libxs
 # rxvt-unicode-truecolor dependencies
 sudo apt install -y libperl-dev cvs
 
+# i3 dependencies
+sudo apt install libanyevent-i3-perl
+
 # firewall
 sudo apt install -y ufw
 sudo ufw default deny incoming

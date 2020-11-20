@@ -32,6 +32,8 @@ exec_always --no-startup-id /usr/bin/redshift-gtk
 # wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
 
+
+
 # Media Keys
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
@@ -153,14 +155,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+#bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+#bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -171,9 +174,17 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
 
 
 # switch to workspace
+bindsym $mod+grave workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -184,6 +195,13 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+minus workspace $ws11
+bindsym $mod+equal workspace $ws12
+bindsym $mod+BackSpace workspace $ws13
+bindsym $mod+Home workspace $ws14
+bindsym $mod+End workspace $ws15
+bindsym $mod+Insert workspace $ws16
+bindsym $mod+Delete workspace $ws17
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1

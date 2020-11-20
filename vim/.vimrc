@@ -25,6 +25,13 @@ set fillchars+=vert:\
 " syntax
 syntax on
 
+" ctrl-p
+let g:ctrlp_max_files = 0
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+endif
+
 set number
 set showmatch
 set expandtab

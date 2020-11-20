@@ -1,0 +1,77 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.21875,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 4,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 408,
+                       "width": 640,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "yarn run dev",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 4,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 408,
+               "width": 640,
+               "x": 0,
+               "y": 0
+            },
+            "name": "ryan@igrav: ~/code/console-ui",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^URxvt$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 4,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 408,
+       "width": 640,
+       "x": 0,
+       "y": 0
+    },
+    "name": "ryan@igrav: ~/code/console-ui",
+    "percent": 0.78125,
+    "swallows": [
+       {
+       "class": "^URxvt$"
+       }
+    ],
+    "type": "con"
+}
+
