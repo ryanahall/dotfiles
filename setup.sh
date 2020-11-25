@@ -47,10 +47,12 @@ cd ~/code/nerd-fonts
 ./install.sh
 
 # urxvt-unicode with 24 bit color patch
-cd ~/code && cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co rxvt-unicode
+cd ~/code && cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co -r rxvt-unicode-rel-9_22 rxvt-unicode
 cd ~/code/rxvt-unicode
+cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co libev
+patch -p0 < ../../dotfiles/urxvt-24-bit-color.patch
 ./autogen.sh
-./configure --enable-everything
+./configure --enable-everything --enable-24-bit-color --enable-256-color
 sudo make install
 
 # docker install
