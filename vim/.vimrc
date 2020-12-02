@@ -245,6 +245,8 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
+  " Recognize tsx as typescript syntax
+  autocmd BufNewFile,BufRead *.tsx set filetype=typescript
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
