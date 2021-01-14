@@ -4,7 +4,7 @@ Xcursor.size: 16
 
 ! 256 colors
 Xterm*termName: xterm-256color
-URxvt*termName: rxvt-unicode-256color
+URxvt*termName: xterm-256color
 
 ! URxvt Style
 URxvt*intensityStyles: false

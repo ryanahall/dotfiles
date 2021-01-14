@@ -101,8 +101,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PATH="/home/ryan/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/ryan/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ryan/google-cloud-sdk/path.zsh.inc'; fi

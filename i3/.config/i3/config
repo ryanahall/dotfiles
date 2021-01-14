@@ -17,9 +17,6 @@ force_xinerama yes
 # imwheel
 # exec_always --no-startup-id /usr/bin/imwheel --kill
 
-# compton compositor
-exec_always --no-startup-id $HOME/.i3/startup/compton.sh
-
 # polybar
 exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
 
@@ -54,13 +51,13 @@ bindsym --release $mod+Right exec --no-startup-id xdotool key --clearmodifiers '
 bindsym --release $mod+Down exec --no-startup-id xdotool key --clearmodifiers 'XF86AudioPlay'
 
 # Disable window titlebars
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 2
 for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
 for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
 # Gaps
-gaps inner 20
+gaps inner 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -102,7 +99,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi drun,window,ssh -show combi"
 
 # change focus
 bindsym $mod+$left focus left
@@ -204,6 +201,7 @@ bindsym $mod+Insert workspace $ws16
 bindsym $mod+Delete workspace $ws17
 
 # move focused container to workspace
+bindsym $mod+Shift+grave move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -214,6 +212,13 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+minus move container to workspace $ws11
+bindsym $mod+Shift+equal move container to workspace $ws12
+bindsym $mod+Shift+BackSpace move container to workspace $ws13
+bindsym $mod+Shift+Home move container to workspace $ws14
+bindsym $mod+Shift+End move container to workspace $ws15
+bindsym $mod+Shift+Insert move container to workspace $ws16
+bindsym $mod+Shift+Delete move container to workspace $ws17
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
