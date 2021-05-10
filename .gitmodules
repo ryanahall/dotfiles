@@ -70,3 +70,9 @@
 [submodule "vim/.vim/bundle/coc.nvim"]
 	path = vim/.vim/bundle/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
+[submodule "vim/.vim/bundle/undotree"]
+	path = vim/.vim/bundle/undotree
+	url = git@github.com:mbbill/undotree.git
+[submodule "vim/.vim/black"]
+	path = vim/.vim/black
+	url = git@github.com:ambv/black
