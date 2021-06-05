@@ -100,10 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export PATH="/home/ryan/.pyenv/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/ryan/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ryan/google-cloud-sdk/path.zsh.inc'; fi
 

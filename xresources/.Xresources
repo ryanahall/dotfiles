@@ -26,6 +26,8 @@ URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=13:antialias=true:au
 ! font
 *.font: Source\ Code\ Pro\ for\ Powerline:pixelsize=13:antialias=true:autohint=true
 
+! URxvt.letterSpace: -2
+
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36

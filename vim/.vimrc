@@ -139,7 +139,7 @@ let g:ag_format="%f:%l:%m"
 " settings to remove scrollbars
 set guioptions-=r
 set guioptions-=L
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+" set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 " python syntax checking
 let g:syntastic_python_checkers=['pyflakes']
