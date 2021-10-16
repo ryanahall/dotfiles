@@ -18,16 +18,19 @@ force_xinerama yes
 # exec_always --no-startup-id /usr/bin/imwheel --kill
 
 # polybar
-exec_always --no-startup-id $HOME/.i3/startup/polybar.sh
+exec --no-startup-id $HOME/.i3/startup/polybar.sh
 
 # dunst
-exec_always --no-startup-id /usr/bin/dunst
+exec --no-startup-id /usr/bin/dunst
 
 # redshift
-exec_always --no-startup-id /usr/bin/redshift-gtk
+exec --no-startup-id /usr/bin/redshift-gtk
 
 # wallpaper
 exec_always --no-startup-id feh --bg-scale $HOME/.i3/extra/wallpaper.jpg
+
+# better scrolling
+exec imwheel
 
 
 
@@ -90,7 +93,7 @@ floating_modifier $mod
 bindsym $mod+Shift+x exec /usr/bin/dm-tool lock
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -160,7 +163,6 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -181,7 +183,6 @@ set $ws17 "17"
 
 
 # switch to workspace
-bindsym $mod+grave workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -201,7 +202,6 @@ bindsym $mod+Insert workspace $ws16
 bindsym $mod+Delete workspace $ws17
 
 # move focused container to workspace
-bindsym $mod+Shift+grave move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3

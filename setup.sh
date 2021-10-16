@@ -34,7 +34,10 @@ sudo apt install -y libdbus-1-dev libx11-dev libxinerama-dev libxrandr-dev libxs
 sudo apt install -y libperl-dev cvs
 
 # i3 dependencies
-sudo apt install libanyevent-i3-perl
+sudo apt install -y libanyevent-i3-perl
+
+# podman
+sudo apt install -y podman
 
 # firewall
 sudo apt install -y ufw
@@ -45,15 +48,6 @@ sudo ufw enable
 cd ~/code && git clone git@github.com:ryanoasis/nerd-fonts.git
 cd ~/code/nerd-fonts
 ./install.sh
-
-# urxvt-unicode with 24 bit color patch
-cd ~/code && cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co -r rxvt-unicode-rel-9_22 rxvt-unicode
-cd ~/code/rxvt-unicode
-cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co libev
-patch -p0 < ../../dotfiles/urxvt-24-bit-color.patch
-./autogen.sh
-./configure --enable-everything --enable-24-bit-color --enable-256-color
-sudo make install
 
 # docker install
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -68,15 +62,15 @@ newgrp docker
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose
 
 # terraform install
-terraform_version=0.12.13
-wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
-unzip terraform_${terraform_version}_linux_amd64.zip
-sudo mv terraform /usr/local/bin
-rm terraform_${terraform_version}_linux_amd64.zip
+#terraform_version=0.12.13
+#wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
+#unzip terraform_${terraform_version}_linux_amd64.zip
+#sudo mv terraform /usr/local/bin
+#rm terraform_${terraform_version}_linux_amd64.zip
 
 
 # zsh
-#sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # polybar install
 cd ~/code && git clone git@github.com:polybar/polybar.git
@@ -125,17 +119,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable mailhog
 sudo systemctl start mailhog
 
-# google-cloud-sdk
-# Add the Cloud SDK distribution URI as a package source
-echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-# Import the Google Cloud Platform public key
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-
-# Update the package list and install the Cloud SDK
-sudo apt update && sudo apt install -y google-cloud-sdk
-
-
 # stow dotfiles
 cd ~/dotfiles
-stow vim git dunst i3 pulse tmux vim xmodmap xresources zsh compton
+stow vim git dunst i3 pulse tmux xmodmap xresources zsh alacritty

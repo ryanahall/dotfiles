@@ -52,7 +52,5 @@
 	name = Ryan Hall
 	email = ryanhall989@gmail.com
 
-[url "git@github.com:"]
-	insteadOf = "https://github.com/"
 [pull]
 	rebase = false
