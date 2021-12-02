@@ -37,6 +37,13 @@
 [rerere]
 	enabled = 1
 
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
 [merge]
 	tool = meld
 
@@ -54,3 +61,9 @@
 
 [pull]
 	rebase = false
+
+[diff "sqlite3"]
+    binary = true
+    textconv = "echo .dump | sqlite3"
+[init]
+	defaultBranch = main

@@ -1,6 +1,3 @@
-[submodule "vim/.vim/bundle/syntastic"]
-	path = vim/.vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -34,9 +31,6 @@
 [submodule "vim/.vim/bundle/ctrlp.vim"]
 	path = vim/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/.vim/bundle/vim-colorschemes"]
-	path = vim/.vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
 [submodule "vim/.vim/bundle/vim-elixir"]
 	path = vim/.vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
@@ -64,15 +58,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
-[submodule "vim/.vim/bundle/tsuquyomi"]
-	path = vim/.vim/bundle/tsuquyomi
-	url = git@github.com:Quramy/tsuquyomi.git
 [submodule "vim/.vim/bundle/coc.nvim"]
 	path = vim/.vim/bundle/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
-[submodule "vim/.vim/bundle/undotree"]
-	path = vim/.vim/bundle/undotree
-	url = git@github.com:mbbill/undotree.git
 [submodule "vim/.vim/black"]
 	path = vim/.vim/black
 	url = git@github.com:ambv/black

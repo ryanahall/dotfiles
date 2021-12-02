@@ -1,3 +1,6 @@
+! DPI
+Xft.dpi: 96
+
 ! Cursor size
 Xcursor.theme: DMZ-White
 Xcursor.size: 16

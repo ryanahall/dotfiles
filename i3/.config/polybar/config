@@ -258,7 +258,7 @@ interval = 1
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 2
+thermal-zone = 12
 warn-temperature = 65
 
 format = <ramp> <label>

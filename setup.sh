@@ -4,7 +4,7 @@ mkdir ~/code
 cd ~/code
 
 # basic packages
-sudo apt install -y unzip playerctl feh compton rxvt-unicode stow vim rofi tmux zsh xfce4-settings imwheel xdotool
+sudo apt install -y unzip playerctl feh rxvt-unicode stow fish vim rofi tmux xfce4-settings imwheel xdotool
 
 # dev dependencies
 sudo apt install -y nginx meld postgresql python3-venv pipenv rbenv gnupg2 cmake libpython3-dev libwebkit2gtk-4.0-dev \
@@ -16,6 +16,9 @@ sudo snap install go --classic
 sudo apt-get remove -y docker docker-engine docker.io containerd runc
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent \
   software-properties-common
+
+# polybar
+sudo apt install -y polybar
 
 # polybar dependencies
 sudo apt install -y build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev \
@@ -44,11 +47,6 @@ sudo apt install -y ufw
 sudo ufw default deny incoming
 sudo ufw enable
 
-# fonts
-cd ~/code && git clone git@github.com:ryanoasis/nerd-fonts.git
-cd ~/code/nerd-fonts
-./install.sh
-
 # docker install
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
@@ -60,28 +58,6 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose
-
-# terraform install
-#terraform_version=0.12.13
-#wget https://releases.hashicorp.com/terraform/${terraform_version}/terraform_${terraform_version}_linux_amd64.zip
-#unzip terraform_${terraform_version}_linux_amd64.zip
-#sudo mv terraform /usr/local/bin
-#rm terraform_${terraform_version}_linux_amd64.zip
-
-
-# zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# polybar install
-cd ~/code && git clone git@github.com:polybar/polybar.git
-cd ~/code/polybar
-git submodule update --init --recursive
-
-mkdir build
-cd build
-cmake ..
-make -j$(nproc)
-sudo make install
 
 # dunst install
 cd ~/code && git clone git@github.com:dunst-project/dunst.git
@@ -121,4 +97,4 @@ sudo systemctl start mailhog
 
 # stow dotfiles
 cd ~/dotfiles
-stow vim git dunst i3 pulse tmux xmodmap xresources zsh alacritty
+stow vim git dunst i3 pulse tmux xmodmap xresources alacritty
